@@ -148,4 +148,3 @@ st.divider()
 if st.button("🔄 Start New Case"):
     st.session_state.clear()
     st.rerun()
-
