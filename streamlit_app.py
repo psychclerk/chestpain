@@ -55,6 +55,136 @@ def generate_case():
             "ecg": "Normal",
             "troponin": "Normal",
             "management": "CT aortogram, urgent surgical consult"
+        },
+        {
+            "diagnosis": "Unstable Angina",
+            "age": 60,
+            "sex": "Male",
+            "pain": "Central chest tightness on minimal exertion",
+            "duration": "20 minutes",
+            "associated": "Dyspnea, sweating",
+            "risk_factors": ["Hypertension", "Dyslipidemia", "Smoking"],
+            "vitals": "BP 130/80 mmHg, HR 96/min, SpO₂ 97%",
+            "ecg": "ST depression in lateral leads",
+            "troponin": "Normal",
+            "management": "Antiplatelets, anticoagulation, early angiography"
+        },
+        {
+            "diagnosis": "NSTEMI",
+            "age": 55,
+            "sex": "Female",
+            "pain": "Retrosternal pressure radiating to left shoulder",
+            "duration": "30 minutes",
+            "associated": "Nausea, diaphoresis",
+            "risk_factors": ["Diabetes", "Hypertension"],
+            "vitals": "BP 140/90 mmHg, HR 100/min, SpO₂ 96%",
+            "ecg": "ST depression and T wave inversion",
+            "troponin": "Elevated",
+            "management": "Dual antiplatelet therapy, anticoagulation, early PCI"
+        },
+        {
+            "diagnosis": "Acute Pericarditis",
+            "age": 28,
+            "sex": "Male",
+            "pain": "Sharp chest pain relieved by sitting forward",
+            "duration": "Several hours",
+            "associated": "Low-grade fever",
+            "risk_factors": ["Recent viral illness"],
+            "vitals": "BP 120/70 mmHg, HR 90/min, SpO₂ 99%",
+            "ecg": "Diffuse ST elevation with PR depression",
+            "troponin": "Normal or mildly elevated",
+            "management": "NSAIDs, colchicine"
+        },
+        {
+            "diagnosis": "Gastroesophageal Reflux Disease (GERD)",
+            "age": 45,
+            "sex": "Male",
+            "pain": "Burning retrosternal pain after meals",
+            "duration": "Intermittent",
+            "associated": "Regurgitation, sour taste",
+            "risk_factors": ["Obesity", "Alcohol use"],
+            "vitals": "Normal",
+            "ecg": "Normal",
+            "troponin": "Normal",
+            "management": "Proton pump inhibitors, lifestyle modification"
+        },
+        {
+            "diagnosis": "Pneumothorax",
+            "age": 23,
+            "sex": "Male",
+            "pain": "Sudden unilateral pleuritic chest pain",
+            "duration": "Sudden onset",
+            "associated": "Dyspnea",
+            "risk_factors": ["Tall thin body habitus", "Smoking"],
+            "vitals": "BP 110/70 mmHg, HR 105/min, SpO₂ 92%",
+            "ecg": "Normal",
+            "troponin": "Normal",
+            "management": "Chest X-ray, needle decompression if unstable"
+        },
+        {
+            "diagnosis": "Costochondritis",
+            "age": 34,
+            "sex": "Female",
+            "pain": "Localized chest wall pain worsened by movement",
+            "duration": "Several days",
+            "associated": "Chest wall tenderness",
+            "risk_factors": ["Recent physical strain"],
+            "vitals": "Normal",
+            "ecg": "Normal",
+            "troponin": "Normal",
+            "management": "NSAIDs, reassurance"
+        },
+        {
+            "diagnosis": "Esophageal Rupture (Boerhaave Syndrome)",
+            "age": 50,
+            "sex": "Male",
+            "pain": "Severe chest pain after forceful vomiting",
+            "duration": "Sudden onset",
+            "associated": "Subcutaneous emphysema",
+            "risk_factors": ["Alcohol binge"],
+            "vitals": "BP 90/60 mmHg, HR 120/min, SpO₂ 90%",
+            "ecg": "Normal",
+            "troponin": "Normal",
+            "management": "Emergency surgical repair, broad-spectrum antibiotics"
+        },
+        {
+            "diagnosis": "Hypertrophic Obstructive Cardiomyopathy",
+            "age": 19,
+            "sex": "Male",
+            "pain": "Exertional chest pain",
+            "duration": "Minutes",
+            "associated": "Syncope",
+            "risk_factors": ["Family history of sudden cardiac death"],
+            "vitals": "BP 110/70 mmHg, HR 85/min, SpO₂ 98%",
+            "ecg": "Left ventricular hypertrophy",
+            "troponin": "Normal",
+            "management": "Beta blockers, activity restriction"
+        },
+        {
+            "diagnosis": "Tension Pneumothorax",
+            "age": 35,
+            "sex": "Male",
+            "pain": "Severe unilateral chest pain",
+            "duration": "Sudden onset",
+            "associated": "Severe respiratory distress",
+            "risk_factors": ["Trauma"],
+            "vitals": "BP 80/50 mmHg, HR 130/min, SpO₂ 85%",
+            "ecg": "Sinus tachycardia",
+            "troponin": "Normal",
+            "management": "Immediate needle decompression"
+        },
+        {
+            "diagnosis": "Mitral Valve Prolapse",
+            "age": 26,
+            "sex": "Female",
+            "pain": "Atypical chest pain",
+            "duration": "Intermittent",
+            "associated": "Palpitations, anxiety",
+            "risk_factors": ["Connective tissue disorder"],
+            "vitals": "Normal",
+            "ecg": "Normal",
+            "troponin": "Normal",
+            "management": "Reassurance, beta blockers if symptomatic"
         }
     ]
     return random.choice(cases)
@@ -119,11 +249,17 @@ user_dx = st.selectbox(
     "What is the most likely diagnosis?",
     [
         "Acute Myocardial Infarction (STEMI)",
+        "Non–ST Elevation Myocardial Infarction (NSTEMI)",
         "Unstable Angina",
-        "Pulmonary Embolism",
         "Aortic Dissection",
-        "Pericarditis",
-        "GERD"
+        "Pulmonary Embolism",
+        "Acute Pericarditis",
+        "Tension Pneumothorax",
+        "Spontaneous Pneumothorax",
+        "Esophageal Rupture (Boerhaave Syndrome)",
+        "Gastroesophageal Reflux Disease (GERD)",
+        "Costochondritis",
+        "Panic / Anxiety Attack"
     ]
 )
 
