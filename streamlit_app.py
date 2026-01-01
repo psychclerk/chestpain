@@ -147,5 +147,5 @@ if st.checkbox("Show Recommended Management"):
 st.divider()
 if st.button("🔄 Start New Case"):
     st.session_state.clear()
-    st.experimental_rerun()
+    st.rerun()
 
